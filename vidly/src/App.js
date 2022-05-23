@@ -46,18 +46,29 @@ class App extends Component {
         </div>
 
         <Navbar />
-        <div className='content'>
+        <div>
           <Routes>
             <Route
               path='/'
               element={<Home />}
             />
             <Route
-              path='/products'
-              element={<Products />}
+              path='/products/:id'
+              element={<ProductDetails />}
             />
             <Route
-              path='/posts'
+              path='/products'
+              // render={props => <Products sortBy='newest' />}
+              // render={props => (
+              //   <Products
+              //     {...props}
+              //     sortBy='newest'
+              //   />
+              // )}
+              element={<Products sortBy='newest' />}
+            />
+            <Route
+              path='/posts/:year/:month'
               element={<Posts />}
             />
             <Route
