@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { useParams } from 'react-router-dom';
 
+// Class değil de fonksiyon olarak tanımlı olsaydı aşağıdaki yöntemle
+// id alınabilirdi.
 // const ProductDetails = () => {
 //   // const params = useParams();
 //   // console.log(params);

@@ -58,16 +58,14 @@ class App extends Component {
             />
             <Route
               path='/products'
-              // render={props => <Products sortBy='newest' />}
-              // render={props => (
-              //   <Products
-              //     {...props}
-              //     sortBy='newest'
-              //   />
-              // )}
               element={<Products sortBy='newest' />}
             />
             <Route
+              // path='/posts/:year?/:month?'
+              //react router dom v6'da yukardaki gibi optional parametre yazmaya gerek yok. (regular expression)
+              // yıl ya da ay'dan birisi bile yoksa artık hiçbir şey render edilmiyor.
+              // optional parameter kullanmak yerine query string kullanmak daha doğru ve kabul
+              // gören bir yöntem. ...2018/06?sortBy=newest&approved=true gibi bir url ile gelinirse:
               path='/posts/:year/:month'
               element={<Posts />}
             />
