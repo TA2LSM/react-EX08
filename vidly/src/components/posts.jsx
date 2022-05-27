@@ -6,6 +6,7 @@ const Posts = () => {
   const { year, month } = useParams();
   // const params = useParams();
   // yukarıdaki iki yöntem de oluyor...
+
   const { search } = useLocation();
   const { sortBy, approved } = queryString.parse(search);
   //objedeki tüm parametreler STRING olacaktır. Ona göre DİKKAT EDİLMELİDİR...
@@ -17,7 +18,7 @@ const Posts = () => {
       <br />
       Query String = {search} <br />
       Search Parameters, sortBy = {sortBy}, Approved = {approved}
-      {/* Year: {params.year} , Month: {params.month} */}
+      {/* Year: {params.year} , Month: {params.month}*/}
     </div>
   );
 };
